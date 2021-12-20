@@ -3,11 +3,11 @@ FLAGS= -Wall -g
 
 all: stringProg
 
-stringProg: String.o main.o
-	$(CC) $(FLAGS) -o stringProg String.o main.o
+stringProg: Strings.o main.o
+	$(CC) $(FLAGS) -o stringProg Strings.o main.o
 
-main.o: main.c String.h
+main.o: main.c Strings.h
 	$(CC) $(FLAGS) -c main.c
 
-String.o: String.c String.h
-	$(CC) $(FLAGS) -c String.c
+String.o: Strings.c Strings.h
+	$(CC) $(FLAGS) -c Strings.c
