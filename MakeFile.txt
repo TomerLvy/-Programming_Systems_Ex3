@@ -1,0 +1,13 @@
+CC=gcc
+FLAGS= -Wall -g
+
+all: stringProg
+
+stringProg: String.o main.o
+	$(CC) $(FLAGS) -o stringProg String.o main.o
+
+main.o: main.c String.h
+	$(CC) $(FLAGS) -c main.c
+
+String.o: String.c String.h
+	$(CC) $(FLAGS) -c String.c
