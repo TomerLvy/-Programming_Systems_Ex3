@@ -11,3 +11,7 @@ main.o: main.c Strings.h
 
 String.o: Strings.c Strings.h
 	$(CC) $(FLAGS) -c Strings.c
+
+.PHONY: clean all
+clean:
+	rm -f rm -f *.o, stringProg
